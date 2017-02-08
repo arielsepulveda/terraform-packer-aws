@@ -1,0 +1,292 @@
+1486586695,,ui,say,amazon-ebs output will be in this color.
+1486586695,,ui,say,
+1486586695,,ui,say,==> amazon-ebs: Prevalidating AMI Name...
+1486586696,,ui,message,    amazon-ebs: Found Image ID: ami-c51e3eb6
+1486586696,,ui,say,==> amazon-ebs: Creating temporary keypair: packer_589b8347-ce02-f70a-7d27-51277974ee0c
+1486586696,,ui,say,==> amazon-ebs: Creating temporary security group for this instance...
+1486586697,,ui,say,==> amazon-ebs: Authorizing access to port 22 the temporary security group...
+1486586697,,ui,say,==> amazon-ebs: Launching a source AWS instance...
+1486586698,,ui,message,    amazon-ebs: Instance ID: i-08667a20cc656d0ec
+1486586698,,ui,say,==> amazon-ebs: Waiting for instance (i-08667a20cc656d0ec) to become ready...
+1486586715,,ui,say,==> amazon-ebs: Adding tags to source instance
+1486586715,,ui,say,==> amazon-ebs: Waiting for SSH to become available...
+1486586737,,ui,say,==> amazon-ebs: Connected to SSH!
+1486586737,,ui,say,==> amazon-ebs: Pausing 10s before the next provisioner...
+1486586747,,ui,say,==> amazon-ebs: Provisioning with shell script: scripts/install_software.sh
+1486586748,,ui,message,    amazon-ebs: Loaded plugins: priorities%!(PACKER_COMMA) update-motd%!(PACKER_COMMA) upgrade-helper
+1486586748,,ui,message,    amazon-ebs: Resolving Dependencies
+1486586748,,ui,message,    amazon-ebs: --> Running transaction check
+1486586748,,ui,message,    amazon-ebs: ---> Package glibc.x86_64 0:2.17-106.168.amzn1 will be updated
+1486586748,,ui,message,    amazon-ebs: ---> Package glibc.x86_64 0:2.17-157.169.amzn1 will be an update
+1486586748,,ui,message,    amazon-ebs: ---> Package glibc-common.x86_64 0:2.17-106.168.amzn1 will be updated
+1486586748,,ui,message,    amazon-ebs: ---> Package glibc-common.x86_64 0:2.17-157.169.amzn1 will be an update
+1486586748,,ui,message,    amazon-ebs: ---> Package kernel.x86_64 0:4.4.44-39.55.amzn1 will be installed
+1486586748,,ui,message,    amazon-ebs: ---> Package kernel-tools.x86_64 0:4.4.35-33.55.amzn1 will be updated
+1486586748,,ui,message,    amazon-ebs: ---> Package kernel-tools.x86_64 0:4.4.44-39.55.amzn1 will be an update
+1486586748,,ui,message,    amazon-ebs: ---> Package krb5-libs.x86_64 0:1.13.2-12.40.amzn1 will be updated
+1486586748,,ui,message,    amazon-ebs: ---> Package krb5-libs.x86_64 0:1.14.1-27.41.amzn1 will be an update
+1486586748,,ui,message,    amazon-ebs: ---> Package libxcb.x86_64 0:1.8.1-1.18.amzn1 will be updated
+1486586748,,ui,message,    amazon-ebs: ---> Package libxcb.x86_64 0:1.11-2.21.amzn1 will be an update
+1486586748,,ui,message,    amazon-ebs: ---> Package ntp.x86_64 0:4.2.6p5-41.32.amzn1 will be updated
+1486586748,,ui,message,    amazon-ebs: ---> Package ntp.x86_64 0:4.2.6p5-43.33.amzn1 will be an update
+1486586748,,ui,message,    amazon-ebs: ---> Package ntpdate.x86_64 0:4.2.6p5-41.32.amzn1 will be updated
+1486586748,,ui,message,    amazon-ebs: ---> Package ntpdate.x86_64 0:4.2.6p5-43.33.amzn1 will be an update
+1486586748,,ui,message,    amazon-ebs: ---> Package sudo.x86_64 0:1.8.6p3-20.22.amzn1 will be updated
+1486586748,,ui,message,    amazon-ebs: ---> Package sudo.x86_64 0:1.8.6p3-25.23.amzn1 will be an update
+1486586748,,ui,message,    amazon-ebs: ---> Package vim-common.x86_64 2:8.0.0134-1.43.amzn1 will be updated
+1486586748,,ui,message,    amazon-ebs: ---> Package vim-common.x86_64 2:8.0.0134-1.44.amzn1 will be an update
+1486586748,,ui,message,    amazon-ebs: ---> Package vim-enhanced.x86_64 2:8.0.0134-1.43.amzn1 will be updated
+1486586748,,ui,message,    amazon-ebs: ---> Package vim-enhanced.x86_64 2:8.0.0134-1.44.amzn1 will be an update
+1486586748,,ui,message,    amazon-ebs: ---> Package vim-filesystem.x86_64 2:8.0.0134-1.43.amzn1 will be updated
+1486586748,,ui,message,    amazon-ebs: ---> Package vim-filesystem.x86_64 2:8.0.0134-1.44.amzn1 will be an update
+1486586748,,ui,message,    amazon-ebs: ---> Package vim-minimal.x86_64 2:8.0.0134-1.43.amzn1 will be updated
+1486586748,,ui,message,    amazon-ebs: ---> Package vim-minimal.x86_64 2:8.0.0134-1.44.amzn1 will be an update
+1486586748,,ui,message,    amazon-ebs: --> Finished Dependency Resolution
+1486586748,,ui,message,    amazon-ebs:
+1486586748,,ui,message,    amazon-ebs: Dependencies Resolved
+1486586748,,ui,message,    amazon-ebs:
+1486586748,,ui,message,    amazon-ebs: ================================================================================
+1486586748,,ui,message,    amazon-ebs: Package            Arch       Version                   Repository        Size
+1486586748,,ui,message,    amazon-ebs: ================================================================================
+1486586748,,ui,message,    amazon-ebs: Installing:
+1486586748,,ui,message,    amazon-ebs: kernel             x86_64     4.4.44-39.55.amzn1        amzn-updates      17 M
+1486586748,,ui,message,    amazon-ebs: Updating:
+1486586748,,ui,message,    amazon-ebs: glibc              x86_64     2.17-157.169.amzn1        amzn-updates     5.7 M
+1486586748,,ui,message,    amazon-ebs: glibc-common       x86_64     2.17-157.169.amzn1        amzn-updates      28 M
+1486586748,,ui,message,    amazon-ebs: kernel-tools       x86_64     4.4.44-39.55.amzn1        amzn-updates      99 k
+1486586748,,ui,message,    amazon-ebs: krb5-libs          x86_64     1.14.1-27.41.amzn1        amzn-updates     856 k
+1486586748,,ui,message,    amazon-ebs: libxcb             x86_64     1.11-2.21.amzn1           amzn-updates     186 k
+1486586748,,ui,message,    amazon-ebs: ntp                x86_64     4.2.6p5-43.33.amzn1       amzn-updates     658 k
+1486586748,,ui,message,    amazon-ebs: ntpdate            x86_64     4.2.6p5-43.33.amzn1       amzn-updates      91 k
+1486586748,,ui,message,    amazon-ebs: sudo               x86_64     1.8.6p3-25.23.amzn1       amzn-updates     929 k
+1486586748,,ui,message,    amazon-ebs: vim-common         x86_64     2:8.0.0134-1.44.amzn1     amzn-updates     9.0 M
+1486586748,,ui,message,    amazon-ebs: vim-enhanced       x86_64     2:8.0.0134-1.44.amzn1     amzn-updates     1.2 M
+1486586748,,ui,message,    amazon-ebs: vim-filesystem     x86_64     2:8.0.0134-1.44.amzn1     amzn-updates      12 k
+1486586748,,ui,message,    amazon-ebs: vim-minimal        x86_64     2:8.0.0134-1.44.amzn1     amzn-updates     495 k
+1486586748,,ui,message,    amazon-ebs:
+1486586748,,ui,message,    amazon-ebs: Transaction Summary
+1486586748,,ui,message,    amazon-ebs: ================================================================================
+1486586748,,ui,message,    amazon-ebs: Install   1 Package
+1486586748,,ui,message,    amazon-ebs: Upgrade  12 Packages
+1486586748,,ui,message,    amazon-ebs:
+1486586748,,ui,message,    amazon-ebs: Total download size: 64 M
+1486586748,,ui,message,    amazon-ebs: Downloading packages:
+1486586751,,ui,message,    amazon-ebs: --------------------------------------------------------------------------------
+1486586751,,ui,message,    amazon-ebs: Total                                               21 MB/s |  64 MB  00:03
+1486586751,,ui,message,    amazon-ebs: Running transaction check
+1486586751,,ui,message,    amazon-ebs: Running transaction test
+1486586752,,ui,message,    amazon-ebs: Transaction test succeeded
+1486586752,,ui,message,    amazon-ebs: Running transaction
+1486586755,,ui,message,    amazon-ebs: Updating   : glibc-2.17-157.169.amzn1.x86_64                             1/25
+1486586755,,ui,message,    amazon-ebs: warning: /etc/nsswitch.conf created as /etc/nsswitch.conf.rpmnew
+1486586759,,ui,message,    amazon-ebs: Updating   : glibc-common-2.17-157.169.amzn1.x86_64                      2/25
+1486586759,,ui,message,    amazon-ebs: Updating   : 2:vim-minimal-8.0.0134-1.44.amzn1.x86_64                    3/25
+1486586759,,ui,message,    amazon-ebs: Updating   : ntpdate-4.2.6p5-43.33.amzn1.x86_64                          4/25
+1486586760,,ui,message,    amazon-ebs: Updating   : 2:vim-filesystem-8.0.0134-1.44.amzn1.x86_64                 5/25
+1486586760,,ui,message,    amazon-ebs: Updating   : 2:vim-common-8.0.0134-1.44.amzn1.x86_64                     6/25
+1486586760,,ui,message,    amazon-ebs: Updating   : 2:vim-enhanced-8.0.0134-1.44.amzn1.x86_64                   7/25
+1486586760,,ui,message,    amazon-ebs: Updating   : ntp-4.2.6p5-43.33.amzn1.x86_64                              8/25
+1486586760,,ui,message,    amazon-ebs: Updating   : sudo-1.8.6p3-25.23.amzn1.x86_64                             9/25
+1486586760,,ui,message,    amazon-ebs: Updating   : libxcb-1.11-2.21.amzn1.x86_64                              10/25
+1486586760,,ui,message,    amazon-ebs: Updating   : krb5-libs-1.14.1-27.41.amzn1.x86_64                        11/25
+1486586761,,ui,message,    amazon-ebs: Updating   : kernel-tools-4.4.44-39.55.amzn1.x86_64                     12/25
+1486586761,,ui,message,    amazon-ebs: Installing : kernel-4.4.44-39.55.amzn1.x86_64                           13/25
+1486586761,,ui,message,    amazon-ebs: Cleanup    : ntp-4.2.6p5-41.32.amzn1.x86_64                             14/25
+1486586761,,ui,message,    amazon-ebs: Cleanup    : sudo-1.8.6p3-20.22.amzn1.x86_64                            15/25
+1486586761,,ui,message,    amazon-ebs: Cleanup    : 2:vim-enhanced-8.0.0134-1.43.amzn1.x86_64                  16/25
+1486586761,,ui,message,    amazon-ebs: Cleanup    : 2:vim-common-8.0.0134-1.43.amzn1.x86_64                    17/25
+1486586761,,ui,message,    amazon-ebs: Cleanup    : 2:vim-minimal-8.0.0134-1.43.amzn1.x86_64                   18/25
+1486586761,,ui,message,    amazon-ebs: Cleanup    : ntpdate-4.2.6p5-41.32.amzn1.x86_64                         19/25
+1486586761,,ui,message,    amazon-ebs: Cleanup    : kernel-tools-4.4.35-33.55.amzn1.x86_64                     20/25
+1486586761,,ui,message,    amazon-ebs: Cleanup    : krb5-libs-1.13.2-12.40.amzn1.x86_64                        21/25
+1486586761,,ui,message,    amazon-ebs: Cleanup    : libxcb-1.8.1-1.18.amzn1.x86_64                             22/25
+1486586762,,ui,message,    amazon-ebs: Cleanup    : 2:vim-filesystem-8.0.0134-1.43.amzn1.x86_64                23/25
+1486586762,,ui,message,    amazon-ebs: Cleanup    : glibc-2.17-106.168.amzn1.x86_64                            24/25
+1486586785,,ui,message,    amazon-ebs: Cleanup    : glibc-common-2.17-106.168.amzn1.x86_64                     25/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : glibc-common-2.17-157.169.amzn1.x86_64                      1/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : glibc-2.17-157.169.amzn1.x86_64                             2/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : libxcb-1.11-2.21.amzn1.x86_64                               3/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : ntp-4.2.6p5-43.33.amzn1.x86_64                              4/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : 2:vim-minimal-8.0.0134-1.44.amzn1.x86_64                    5/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : ntpdate-4.2.6p5-43.33.amzn1.x86_64                          6/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : 2:vim-filesystem-8.0.0134-1.44.amzn1.x86_64                 7/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : krb5-libs-1.14.1-27.41.amzn1.x86_64                         8/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : kernel-tools-4.4.44-39.55.amzn1.x86_64                      9/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : 2:vim-common-8.0.0134-1.44.amzn1.x86_64                    10/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : 2:vim-enhanced-8.0.0134-1.44.amzn1.x86_64                  11/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : sudo-1.8.6p3-25.23.amzn1.x86_64                            12/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : kernel-4.4.44-39.55.amzn1.x86_64                           13/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : ntp-4.2.6p5-41.32.amzn1.x86_64                             14/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : sudo-1.8.6p3-20.22.amzn1.x86_64                            15/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : 2:vim-minimal-8.0.0134-1.43.amzn1.x86_64                   16/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : ntpdate-4.2.6p5-41.32.amzn1.x86_64                         17/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : krb5-libs-1.13.2-12.40.amzn1.x86_64                        18/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : 2:vim-enhanced-8.0.0134-1.43.amzn1.x86_64                  19/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : 2:vim-filesystem-8.0.0134-1.43.amzn1.x86_64                20/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : libxcb-1.8.1-1.18.amzn1.x86_64                             21/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : 2:vim-common-8.0.0134-1.43.amzn1.x86_64                    22/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : kernel-tools-4.4.35-33.55.amzn1.x86_64                     23/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : glibc-common-2.17-106.168.amzn1.x86_64                     24/25
+1486586785,,ui,message,    amazon-ebs: Verifying  : glibc-2.17-106.168.amzn1.x86_64                            25/25
+1486586785,,ui,message,    amazon-ebs:
+1486586785,,ui,message,    amazon-ebs: Installed:
+1486586785,,ui,message,    amazon-ebs: kernel.x86_64 0:4.4.44-39.55.amzn1
+1486586785,,ui,message,    amazon-ebs:
+1486586785,,ui,message,    amazon-ebs: Updated:
+1486586785,,ui,message,    amazon-ebs: glibc.x86_64 0:2.17-157.169.amzn1
+1486586785,,ui,message,    amazon-ebs: glibc-common.x86_64 0:2.17-157.169.amzn1
+1486586785,,ui,message,    amazon-ebs: kernel-tools.x86_64 0:4.4.44-39.55.amzn1
+1486586785,,ui,message,    amazon-ebs: krb5-libs.x86_64 0:1.14.1-27.41.amzn1
+1486586785,,ui,message,    amazon-ebs: libxcb.x86_64 0:1.11-2.21.amzn1
+1486586785,,ui,message,    amazon-ebs: ntp.x86_64 0:4.2.6p5-43.33.amzn1
+1486586785,,ui,message,    amazon-ebs: ntpdate.x86_64 0:4.2.6p5-43.33.amzn1
+1486586785,,ui,message,    amazon-ebs: sudo.x86_64 0:1.8.6p3-25.23.amzn1
+1486586785,,ui,message,    amazon-ebs: vim-common.x86_64 2:8.0.0134-1.44.amzn1
+1486586785,,ui,message,    amazon-ebs: vim-enhanced.x86_64 2:8.0.0134-1.44.amzn1
+1486586785,,ui,message,    amazon-ebs: vim-filesystem.x86_64 2:8.0.0134-1.44.amzn1
+1486586785,,ui,message,    amazon-ebs: vim-minimal.x86_64 2:8.0.0134-1.44.amzn1
+1486586785,,ui,message,    amazon-ebs:
+1486586785,,ui,message,    amazon-ebs: Complete!
+1486586785,,ui,message,    amazon-ebs: Loaded plugins: priorities%!(PACKER_COMMA) update-motd%!(PACKER_COMMA) upgrade-helper
+1486586785,,ui,message,    amazon-ebs: Package wget-1.18-1.18.amzn1.x86_64 already installed and latest version
+1486586785,,ui,message,    amazon-ebs: Package 1:nfs-utils-1.3.0-0.21.amzn1.x86_64 already installed and latest version
+1486586785,,ui,message,    amazon-ebs: Resolving Dependencies
+1486586785,,ui,message,    amazon-ebs: --> Running transaction check
+1486586785,,ui,message,    amazon-ebs: ---> Package httpd.x86_64 0:2.2.31-1.8.amzn1 will be installed
+1486586785,,ui,message,    amazon-ebs: --> Processing Dependency: httpd-tools = 2.2.31-1.8.amzn1 for package: httpd-2.2.31-1.8.amzn1.x86_64
+1486586785,,ui,message,    amazon-ebs: --> Processing Dependency: apr-util-ldap for package: httpd-2.2.31-1.8.amzn1.x86_64
+1486586785,,ui,message,    amazon-ebs: --> Processing Dependency: libaprutil-1.so.0()(64bit) for package: httpd-2.2.31-1.8.amzn1.x86_64
+1486586785,,ui,message,    amazon-ebs: --> Processing Dependency: libapr-1.so.0()(64bit) for package: httpd-2.2.31-1.8.amzn1.x86_64
+1486586785,,ui,message,    amazon-ebs: ---> Package mc.x86_64 1:4.7.0.2-3.7.amzn1 will be installed
+1486586785,,ui,message,    amazon-ebs: --> Processing Dependency: python27-pytz for package: 1:mc-4.7.0.2-3.7.amzn1.x86_64
+1486586785,,ui,message,    amazon-ebs: ---> Package mod_ssl.x86_64 1:2.2.31-1.8.amzn1 will be installed
+1486586785,,ui,message,    amazon-ebs: ---> Package php.x86_64 0:5.3.29-1.8.amzn1 will be installed
+1486586785,,ui,message,    amazon-ebs: --> Processing Dependency: php-common(x86-64) = 5.3.29-1.8.amzn1 for package: php-5.3.29-1.8.amzn1.x86_64
+1486586785,,ui,message,    amazon-ebs: --> Processing Dependency: php-cli(x86-64) = 5.3.29-1.8.amzn1 for package: php-5.3.29-1.8.amzn1.x86_64
+1486586785,,ui,message,    amazon-ebs: --> Processing Dependency: libgmp.so.3()(64bit) for package: php-5.3.29-1.8.amzn1.x86_64
+1486586785,,ui,message,    amazon-ebs: ---> Package php-mysql.x86_64 0:5.3.29-1.8.amzn1 will be installed
+1486586785,,ui,message,    amazon-ebs: --> Processing Dependency: php-pdo(x86-64) = 5.3.29-1.8.amzn1 for package: php-mysql-5.3.29-1.8.amzn1.x86_64
+1486586785,,ui,message,    amazon-ebs: --> Processing Dependency: libmysqlclient.so.18(libmysqlclient_16)(64bit) for package: php-mysql-5.3.29-1.8.amzn1.x86_64
+1486586785,,ui,message,    amazon-ebs: --> Processing Dependency: libmysqlclient.so.18(libmysqlclient_18)(64bit) for package: php-mysql-5.3.29-1.8.amzn1.x86_64
+1486586785,,ui,message,    amazon-ebs: --> Processing Dependency: libmysqlclient.so.18()(64bit) for package: php-mysql-5.3.29-1.8.amzn1.x86_64
+1486586785,,ui,message,    amazon-ebs: ---> Package stress.x86_64 0:1.0.4-4.2.amzn1 will be installed
+1486586785,,ui,message,    amazon-ebs: --> Running transaction check
+1486586785,,ui,message,    amazon-ebs: ---> Package apr.x86_64 0:1.5.1-1.12.amzn1 will be installed
+1486586785,,ui,message,    amazon-ebs: ---> Package apr-util.x86_64 0:1.4.1-4.17.amzn1 will be installed
+1486586785,,ui,message,    amazon-ebs: ---> Package apr-util-ldap.x86_64 0:1.4.1-4.17.amzn1 will be installed
+1486586785,,ui,message,    amazon-ebs: ---> Package compat-gmp4.x86_64 0:4.3.2-1.14.amzn1 will be installed
+1486586785,,ui,message,    amazon-ebs: ---> Package httpd-tools.x86_64 0:2.2.31-1.8.amzn1 will be installed
+1486586785,,ui,message,    amazon-ebs: ---> Package mysql55-libs.x86_64 0:5.5.54-1.16.amzn1 will be installed
+1486586785,,ui,message,    amazon-ebs: ---> Package php-cli.x86_64 0:5.3.29-1.8.amzn1 will be installed
+1486586785,,ui,message,    amazon-ebs: ---> Package php-common.x86_64 0:5.3.29-1.8.amzn1 will be installed
+1486586785,,ui,message,    amazon-ebs: ---> Package php-pdo.x86_64 0:5.3.29-1.8.amzn1 will be installed
+1486586785,,ui,message,    amazon-ebs: ---> Package python27-pytz.noarch 0:2010h-2.6.amzn1 will be installed
+1486586786,,ui,message,    amazon-ebs: --> Finished Dependency Resolution
+1486586786,,ui,message,    amazon-ebs:
+1486586786,,ui,message,    amazon-ebs: Dependencies Resolved
+1486586786,,ui,message,    amazon-ebs:
+1486586786,,ui,message,    amazon-ebs: ================================================================================
+1486586786,,ui,message,    amazon-ebs: Package           Arch       Version                    Repository        Size
+1486586786,,ui,message,    amazon-ebs: ================================================================================
+1486586786,,ui,message,    amazon-ebs: Installing:
+1486586786,,ui,message,    amazon-ebs: httpd             x86_64     2.2.31-1.8.amzn1           amzn-main        1.2 M
+1486586786,,ui,message,    amazon-ebs: mc                x86_64     1:4.7.0.2-3.7.amzn1        amzn-main        2.1 M
+1486586786,,ui,message,    amazon-ebs: mod_ssl           x86_64     1:2.2.31-1.8.amzn1         amzn-main        107 k
+1486586786,,ui,message,    amazon-ebs: php               x86_64     5.3.29-1.8.amzn1           amzn-main        2.8 M
+1486586786,,ui,message,    amazon-ebs: php-mysql         x86_64     5.3.29-1.8.amzn1           amzn-main        178 k
+1486586786,,ui,message,    amazon-ebs: stress            x86_64     1.0.4-4.2.amzn1            amzn-main         38 k
+1486586786,,ui,message,    amazon-ebs: Installing for dependencies:
+1486586786,,ui,message,    amazon-ebs: apr               x86_64     1.5.1-1.12.amzn1           amzn-main        116 k
+1486586786,,ui,message,    amazon-ebs: apr-util          x86_64     1.4.1-4.17.amzn1           amzn-main         87 k
+1486586786,,ui,message,    amazon-ebs: apr-util-ldap     x86_64     1.4.1-4.17.amzn1           amzn-main         17 k
+1486586786,,ui,message,    amazon-ebs: compat-gmp4       x86_64     4.3.2-1.14.amzn1           amzn-main        302 k
+1486586786,,ui,message,    amazon-ebs: httpd-tools       x86_64     2.2.31-1.8.amzn1           amzn-main         80 k
+1486586786,,ui,message,    amazon-ebs: mysql55-libs      x86_64     5.5.54-1.16.amzn1          amzn-updates     815 k
+1486586786,,ui,message,    amazon-ebs: php-cli           x86_64     5.3.29-1.8.amzn1           amzn-main        2.6 M
+1486586786,,ui,message,    amazon-ebs: php-common        x86_64     5.3.29-1.8.amzn1           amzn-main        1.0 M
+1486586786,,ui,message,    amazon-ebs: php-pdo           x86_64     5.3.29-1.8.amzn1           amzn-main        170 k
+1486586786,,ui,message,    amazon-ebs: python27-pytz     noarch     2010h-2.6.amzn1            amzn-main         43 k
+1486586786,,ui,message,    amazon-ebs:
+1486586786,,ui,message,    amazon-ebs: Transaction Summary
+1486586786,,ui,message,    amazon-ebs: ================================================================================
+1486586786,,ui,message,    amazon-ebs: Install  6 Packages (+10 Dependent packages)
+1486586786,,ui,message,    amazon-ebs:
+1486586786,,ui,message,    amazon-ebs: Total download size: 12 M
+1486586786,,ui,message,    amazon-ebs: Installed size: 34 M
+1486586786,,ui,message,    amazon-ebs: Downloading packages:
+1486586787,,ui,message,    amazon-ebs: --------------------------------------------------------------------------------
+1486586787,,ui,message,    amazon-ebs: Total                                               11 MB/s |  12 MB  00:01
+1486586787,,ui,message,    amazon-ebs: Running transaction check
+1486586787,,ui,message,    amazon-ebs: Running transaction test
+1486586787,,ui,message,    amazon-ebs: Transaction test succeeded
+1486586787,,ui,message,    amazon-ebs: Running transaction
+1486586787,,ui,message,    amazon-ebs: Installing : apr-1.5.1-1.12.amzn1.x86_64                                 1/16
+1486586787,,ui,message,    amazon-ebs: Installing : apr-util-1.4.1-4.17.amzn1.x86_64                            2/16
+1486586787,,ui,message,    amazon-ebs: Installing : php-common-5.3.29-1.8.amzn1.x86_64                          3/16
+1486586787,,ui,message,    amazon-ebs: Installing : compat-gmp4-4.3.2-1.14.amzn1.x86_64                         4/16
+1486586787,,ui,message,    amazon-ebs: Installing : php-cli-5.3.29-1.8.amzn1.x86_64                             5/16
+1486586787,,ui,message,    amazon-ebs: Installing : php-pdo-5.3.29-1.8.amzn1.x86_64                             6/16
+1486586787,,ui,message,    amazon-ebs: Installing : httpd-tools-2.2.31-1.8.amzn1.x86_64                         7/16
+1486586787,,ui,message,    amazon-ebs: Installing : apr-util-ldap-1.4.1-4.17.amzn1.x86_64                       8/16
+1486586787,,ui,message,    amazon-ebs: Installing : httpd-2.2.31-1.8.amzn1.x86_64                               9/16
+1486586787,,ui,message,    amazon-ebs: Installing : mysql55-libs-5.5.54-1.16.amzn1.x86_64                      10/16
+1486586787,,ui,message,    amazon-ebs: Installing : python27-pytz-2010h-2.6.amzn1.noarch                       11/16
+1486586787,,ui,message,    amazon-ebs: Installing : 1:mc-4.7.0.2-3.7.amzn1.x86_64                              12/16
+1486586787,,ui,message,    amazon-ebs: Installing : php-mysql-5.3.29-1.8.amzn1.x86_64                          13/16
+1486586788,,ui,message,    amazon-ebs: Installing : 1:mod_ssl-2.2.31-1.8.amzn1.x86_64                          14/16
+1486586788,,ui,message,    amazon-ebs: Installing : php-5.3.29-1.8.amzn1.x86_64                                15/16
+1486586788,,ui,message,    amazon-ebs: Installing : stress-1.0.4-4.2.amzn1.x86_64                              16/16
+1486586788,,ui,message,    amazon-ebs: Verifying  : php-common-5.3.29-1.8.amzn1.x86_64                          1/16
+1486586788,,ui,message,    amazon-ebs: Verifying  : apr-1.5.1-1.12.amzn1.x86_64                                 2/16
+1486586788,,ui,message,    amazon-ebs: Verifying  : httpd-2.2.31-1.8.amzn1.x86_64                               3/16
+1486586788,,ui,message,    amazon-ebs: Verifying  : python27-pytz-2010h-2.6.amzn1.noarch                        4/16
+1486586788,,ui,message,    amazon-ebs: Verifying  : 1:mod_ssl-2.2.31-1.8.amzn1.x86_64                           5/16
+1486586788,,ui,message,    amazon-ebs: Verifying  : php-cli-5.3.29-1.8.amzn1.x86_64                             6/16
+1486586788,,ui,message,    amazon-ebs: Verifying  : php-mysql-5.3.29-1.8.amzn1.x86_64                           7/16
+1486586788,,ui,message,    amazon-ebs: Verifying  : php-pdo-5.3.29-1.8.amzn1.x86_64                             8/16
+1486586788,,ui,message,    amazon-ebs: Verifying  : mysql55-libs-5.5.54-1.16.amzn1.x86_64                       9/16
+1486586788,,ui,message,    amazon-ebs: Verifying  : apr-util-1.4.1-4.17.amzn1.x86_64                           10/16
+1486586788,,ui,message,    amazon-ebs: Verifying  : php-5.3.29-1.8.amzn1.x86_64                                11/16
+1486586788,,ui,message,    amazon-ebs: Verifying  : 1:mc-4.7.0.2-3.7.amzn1.x86_64                              12/16
+1486586788,,ui,message,    amazon-ebs: Verifying  : httpd-tools-2.2.31-1.8.amzn1.x86_64                        13/16
+1486586788,,ui,message,    amazon-ebs: Verifying  : compat-gmp4-4.3.2-1.14.amzn1.x86_64                        14/16
+1486586788,,ui,message,    amazon-ebs: Verifying  : apr-util-ldap-1.4.1-4.17.amzn1.x86_64                      15/16
+1486586788,,ui,message,    amazon-ebs: Verifying  : stress-1.0.4-4.2.amzn1.x86_64                              16/16
+1486586788,,ui,message,    amazon-ebs:
+1486586788,,ui,message,    amazon-ebs: Installed:
+1486586788,,ui,message,    amazon-ebs: httpd.x86_64 0:2.2.31-1.8.amzn1          mc.x86_64 1:4.7.0.2-3.7.amzn1
+1486586788,,ui,message,    amazon-ebs: mod_ssl.x86_64 1:2.2.31-1.8.amzn1        php.x86_64 0:5.3.29-1.8.amzn1
+1486586788,,ui,message,    amazon-ebs: php-mysql.x86_64 0:5.3.29-1.8.amzn1      stress.x86_64 0:1.0.4-4.2.amzn1
+1486586788,,ui,message,    amazon-ebs:
+1486586788,,ui,message,    amazon-ebs: Dependency Installed:
+1486586788,,ui,message,    amazon-ebs: apr.x86_64 0:1.5.1-1.12.amzn1
+1486586788,,ui,message,    amazon-ebs: apr-util.x86_64 0:1.4.1-4.17.amzn1
+1486586788,,ui,message,    amazon-ebs: apr-util-ldap.x86_64 0:1.4.1-4.17.amzn1
+1486586788,,ui,message,    amazon-ebs: compat-gmp4.x86_64 0:4.3.2-1.14.amzn1
+1486586788,,ui,message,    amazon-ebs: httpd-tools.x86_64 0:2.2.31-1.8.amzn1
+1486586788,,ui,message,    amazon-ebs: mysql55-libs.x86_64 0:5.5.54-1.16.amzn1
+1486586788,,ui,message,    amazon-ebs: php-cli.x86_64 0:5.3.29-1.8.amzn1
+1486586788,,ui,message,    amazon-ebs: php-common.x86_64 0:5.3.29-1.8.amzn1
+1486586788,,ui,message,    amazon-ebs: php-pdo.x86_64 0:5.3.29-1.8.amzn1
+1486586788,,ui,message,    amazon-ebs: python27-pytz.noarch 0:2010h-2.6.amzn1
+1486586788,,ui,message,    amazon-ebs:
+1486586788,,ui,message,    amazon-ebs: Complete!
+1486586788,,ui,say,==> amazon-ebs: Stopping the source instance...
+1486586789,,ui,say,==> amazon-ebs: Waiting for the instance to stop...
+1486586842,,ui,say,==> amazon-ebs: Creating the AMI: cas-packed 1486586695
+1486586843,,ui,message,    amazon-ebs: AMI: ami-911f3bf7
+1486586843,,ui,say,==> amazon-ebs: Waiting for AMI to become ready...
+1486586914,,ui,say,==> amazon-ebs: Terminating the source AWS instance...
+1486586921,,ui,say,==> amazon-ebs: Cleaning up any extra volumes...
+1486586921,,ui,say,==> amazon-ebs: No volumes to clean up%!(PACKER_COMMA) skipping
+1486586921,,ui,say,==> amazon-ebs: Deleting temporary security group...
+1486586921,,ui,say,==> amazon-ebs: Deleting temporary keypair...
+1486586921,,ui,say,Build 'amazon-ebs' finished.
+1486586921,,ui,say,\n==> Builds finished. The artifacts of successful builds are:
+1486586921,amazon-ebs,artifact-count,1
+1486586921,amazon-ebs,artifact,0,builder-id,mitchellh.amazonebs
+1486586921,amazon-ebs,artifact,0,id,eu-west-1:ami-911f3bf7
+1486586921,amazon-ebs,artifact,0,string,AMIs were created:\n\neu-west-1: ami-911f3bf7
+1486586921,amazon-ebs,artifact,0,files-count,0
+1486586921,amazon-ebs,artifact,0,end
+1486586921,,ui,say,--> amazon-ebs: AMIs were created:\n\neu-west-1: ami-911f3bf7
