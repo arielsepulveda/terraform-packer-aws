@@ -9,7 +9,7 @@ resource "aws_launch_configuration" "Web-launchconfig" {
 
 resource "aws_autoscaling_group" "Web-autoscaling" {
   name                 = "Web-autoscaling"
-  vpc_zone_identifier  = ["${aws_subnet.myVPC-public-subnet-1.id}", "${aws_subnet.myVPC-public-subnet-2.id}", "${aws_subnet.myVPC-public-subnet-3.id}"]
+  vpc_zone_identifier  = ["${aws_subnet.myVPC-public-subnet-1.id}", "${aws_subnet.myVPC-public-subnet-2.id}"]
   launch_configuration = "${aws_launch_configuration.Web-launchconfig.name}"
   min_size             = 1
   max_size             = 2

@@ -67,6 +67,24 @@ resource "aws_route_table" "myVPC-public-route" {
     }
     tags { Name = "myVPC-public-route" }
 }
+resource "aws_route_table" "myVPC-private-route" {
+    vpc_id = "${aws_vpc.myVPC.id}"
+    route {
+        cidr_block = "0.0.0.0/0"
+        nat_gateway_id = "${aws_nat_gateway.myVPC-NAT.id}"
+    }
+    tags { Name = "myVPC-private-route" }
+}
+# EIP for NAT
+resource "aws_eip" "forNat" {
+    vpc      = true
+}
+# NAT Gateway
+resource "aws_nat_gateway" "myVPC-NAT" {
+    allocation_id = "${aws_eip.forNat.id}"
+    subnet_id = "${aws_subnet.myVPC-public-subnet-3.id}"
+    depends_on = ["aws_internet_gateway.myVPC-gateway"]
+}
 # Route Associations for Public
 resource "aws_route_table_association" "myVPC-public-1" {
     subnet_id = "${aws_subnet.myVPC-public-subnet-1.id}"
